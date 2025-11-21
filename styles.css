@@ -103,7 +103,7 @@ figure.introducao-container img {
 
 @media (max-width: 480px) {
     figure.introducao-container {
-        height: 60vh;        /* container height */
+        height: 80vh;        /* container height */
     }
     figure.introducao-container img {
         height: 160%;         /* zoom more for mobile */
@@ -111,4 +111,5 @@ figure.introducao-container img {
     }
 
 }
+
 
