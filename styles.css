@@ -107,6 +107,7 @@ figure.introducao-container img {
     }
     figure.introducao-container img {
         height: 160%;         /* zoom more for mobile */
-        object-position: 50% 0%; /* move image higher */
+        object-position: 50% -10%; /* move image higher */
     }
+
 }
