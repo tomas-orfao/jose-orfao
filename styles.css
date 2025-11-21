@@ -103,13 +103,14 @@ figure.introducao-container img {
 
 @media (max-width: 480px) {
     figure.introducao-container {
-        height: 80vh;        /* container height */
+        height: 90vh;        /* container height */
     }
     figure.introducao-container img {
-        height: 160%;         /* zoom more for mobile */
-        object-position: 50% -10%; /* move image higher */
+        height: 110%;         /* zoom more for mobile */
+        object-position: center; /* move image higher */
     }
 
 }
+
 
 
