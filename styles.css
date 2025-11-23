@@ -69,13 +69,38 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 8px 5px; 
+    padding: 8px 0px; 
     border-radius: 50px;
 }
 
 .nav-lista a {
+    position: relative;
     color: white;
     font-weight: 500;
+    display: inline-block;
+    padding: 5px 2px;
+    z-index: 1;
+}
+
+/* the pill */
+.nav-lista a::after {
+    content: "";
+    position: absolute;
+    inset: 0;                   /* makes the pill match the link size */
+    background: rgba(255,255,255,0.08); /* slightly darker shade */
+    border-radius: 30px;        /* pill shape */
+    transform: scale(1);      /* starts small */
+    opacity: 0;                 /* hidden */
+    transition: 
+        transform 0.25s ease,
+        opacity 0.25s ease;
+    z-index: -1;
+}
+
+/* on hover: pill appears */
+.nav-lista a:hover::after {
+    transform: scale(1.2);
+    opacity: 1;
 }
 
 .nav-lista li {
