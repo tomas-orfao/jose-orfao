@@ -85,6 +85,14 @@ header {
     font-weight: 500;
 }
 
+.nav-lista-tele.hide-on-scroll {
+    max-height: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
 /* Show the menu when toggled */
 .nav-lista-tele.show {
     max-height: 1000px; /* adjust if needed */
