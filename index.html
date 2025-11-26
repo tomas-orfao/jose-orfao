@@ -28,21 +28,46 @@
 
         <a class="skip-link" href="#introducao">Saltar para conteúdo principal</a> <!-- MUDAR O HREF PARA O CONTEÚDO PRINCIPAL -->
         
-        <nav class="navbar" role="navigation" aria-label="Navegação principal">
-            <div class="logo">
+        <nav class="navbar-tele" role="navigation" aria-label="Navegação principal">
+            <div class="logo-tele">
                 <a href="#introducao" aria-label="Introdução ao advogado José Orfão"> <!-- METER O LOGO TEXTO AQUI E ARRANJAR FORMA DE MUDAR PARA LOGO ICON -->
                 <img src="Advogado Fotos/José Orfão Logótipo.svg" alt="Logótipo Advogado José Orfão">
                 </a>
             </div>
 
-            <ul class="nav-lista" style="list-style-type: none;">
+             <ul class="nav-lista-tele" style="list-style-type: none;">
                 <li><a href="#pratica-preferencial">Prática preferencial</a>
-                    <ul class="dropdown">
+                    <ul class="dropdown-tele">
                         <li><a href="pratica-viacao.html">Acidentes de viação</a></li>
-                        <hr class="dropdown-hr">
-                        <li><a href="#">Acidentes de trabalho</a></li>
-                        <hr class="dropdown-hr">
-                        <li><a href="#">Venda defeituosa de bens</a></li>
+                        <hr class="dropdown-hr-tele">
+                        <li><a href="pratica-trabalho.html">Acidentes de trabalho</a></li>
+                        <hr class="dropdown-hr-tele">
+                        <li><a href="pratica-venda.html">Venda defeituosa de bens</a></li>
+                    </ul>
+                </li>
+                <li><a href="#outras-areas">Outras áreas</a></li>
+                <li><a href="#principios-valores">Princípios e Valores</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#informacao">Informação</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <nav class="navbar-pc" role="navigation" aria-label="Navegação principal">
+            <div class="logo-pc">
+                <a href="#introducao" aria-label="Introdução ao advogado José Orfão"> <!-- METER O LOGO TEXTO AQUI E ARRANJAR FORMA DE MUDAR PARA LOGO ICON -->
+                <img src="Advogado Fotos/José Orfão Logótipo.svg" alt="Logótipo Advogado José Orfão">
+                </a>
+            </div>
+
+             <ul class="nav-lista-pc" style="list-style-type: none;">
+                <li><a href="#pratica-preferencial">Prática preferencial</a>
+                    <ul class="dropdown-pc">
+                        <li><a href="pratica-viacao.html">Acidentes de viação</a></li>
+                        <hr class="dropdown-hr-pc">
+                        <li><a href="pratica-trabalho.html">Acidentes de trabalho</a></li>
+                        <hr class="dropdown-hr-pc">
+                        <li><a href="pratica-venda.html">Venda defeituosa de bens</a></li>
                     </ul>
                 </li>
                 <li><a href="#outras-areas">Outras áreas</a></li>
@@ -59,10 +84,12 @@
             <figure class="introducao-container">
                 <img src="Advogado Fotos/José Orfão advogado.png" alt="Fotografia de José Orfão no seu escritório">
             </figure>
-            <h1>Advogado</h1>
-            <h2>José Orfão</h2>
-            <p>O Advogado, na defesa incondicional dos legítimos interesses do seu cliente deve salvaguardar, sempre, os princípios ético-legais a que está vinculado.</p>
-            <a href="#formacao" class="btn">Ver mais</a>
+            <div class="intro-text-container">
+                <h1>Advogado</h1>
+                <h2>José Orfão</h2>
+                <p>O Advogado, na defesa incondicional dos legítimos interesses do seu cliente deve salvaguardar, sempre, os princípios ético-legais a que está vinculado.</p>
+                <a href="#formacao" class="btn">VER MAIS</a>
+            </div>
         </div>
     </section>
 
@@ -263,7 +290,7 @@
 
     <section id="formacao" aria-label="Formação profissional e académica do advogado">
         <figure>
-        <img src="" alt="Foto de José Orfão, advogado, sentado" class="imagem-formacao"> <!-- METER A IMAGEM -->
+        <img src="Advogado Fotos/José Orfão retrato.jpeg" alt="Foto de José Orfão, advogado, sentado" class="imagem-formacao"> <!-- METER A IMAGEM -->
         </figure>
         <div class="formacao-conteudo">
 

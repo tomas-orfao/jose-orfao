@@ -41,24 +41,39 @@ header {
     border-radius: 6px;
 }
 
-.navbar{
+.logo-tele img{
+    height: 30px;
+    margin: 10px;
+}
+
+.navbar-tele {
+    display: none;
+    margin: 20px 20% 0px 20%;
+    background-color: rgba(62, 54, 49, 0.82);
+    border: 0.5px solid rgba(105, 95, 85, 0.95);
+    backdrop-filter: blur(10px); /* the frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+.navbar-pc{
   display:flex;
   align-items:center;
-  justify-content: center;
-  gap:200px;
+  justify-content: left;
   margin-top: 20px;
   
 }
 
-.logo{
-  margin-left: 20px;
+.logo-pc{
+  margin-left: 15%;
+  margin-right:10%
 }
 
-.logo img{
+.logo-pc img{
   height:30px;
+  width: 100%;
 }
 
-.nav-lista {
+.nav-lista-pc {
     background-color: rgba(62, 54, 49, 0.82); /* semi-transparent blue */
     border: 0.5px solid rgba(105, 95, 85, 0.95);
     backdrop-filter: blur(10px); /* the frosted glass effect */
@@ -71,14 +86,14 @@ header {
     border-radius: 50px;
 }
 
-.nav-lista li {
+.nav-lista-pc li {
     position: relative;
     list-style: none;
     margin: 0 20px;
     text-align: center;
 }
 
-.nav-lista a {
+.nav-lista-pc a {
     position: relative;
     color: white;
     font-weight: 500;
@@ -88,7 +103,7 @@ header {
 }
 
 /* the pill */
-.nav-lista a::after {
+.nav-lista-pc a::after {
     content: "";
     position: absolute;
     inset: 0;                   /* makes the pill match the link size */
@@ -103,12 +118,12 @@ header {
 }
 
 /* on hover: pill appears */
-.nav-lista a:hover::after {
+.nav-lista-pc a:hover::after {
     transform: scale(1.2,1.5);
     opacity: 1;
 }
 
-.nav-lista a::before {
+.nav-lista-pc a::before {
     content: "";
     position: absolute;
     inset: 10px 7px; /* makes it smaller than the outer pill */
@@ -122,17 +137,17 @@ header {
     z-index: -1;
 }
 
-.nav-lista a:hover::before {
+.nav-lista-pc a:hover::before {
     opacity: 1;
     transform: scale(1.3,1.4);
 }
 
-.dropdown {
+.dropdown-pc {
     position: absolute;
-    top: 100%;     /* right below the parent */
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(62, 54, 49, 1); 
+    background-color: rgba(62, 54, 49, 0.95);
     border: 0.5px solid rgba(105, 95, 85, 0.95);
     padding:  0px 0;
     border-radius: 12px;
@@ -147,19 +162,19 @@ header {
         transform 0.25s ease;
 }
 
-.dropdown-hr{
+.dropdown-hr-pc{
     border: none;            /* remove default border */
     height: 1px;             /* thickness */
     background-color: rgba(105, 95, 85, 0.95); /* your color */
     margin: 0px 30px; 
 }
 
-.dropdown li {
+.dropdown-pc li {
     padding: 0px 0px;
     white-space: nowrap;
 }
 
-.dropdown a {
+.dropdown-pc a {
     position: relative;
     z-index: 1;
     text-align: center;
@@ -167,13 +182,13 @@ header {
     display: block;
 }
 
-  .nav-lista li:hover > .dropdown {
+  .nav-lista-pc li:hover > .dropdown-pc {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(-50%) translateY(6px);
 }
 
-.dropdown a::after {
+.dropdown-pc a::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -188,14 +203,87 @@ header {
 }
 
 /* When hovering the dropdown option */
-.dropdown a:hover::after {
+.dropdown-pc a:hover::after {
     opacity: 1;
     transform: scale(1.21, 1.1); /* expand fully between the HR lines */
+}
+
+@media (max-width: 1200px) {
+
+    .navbar-pc {
+        display: none;   /* hide desktop menu */
+    }
+
+    .navbar-tele {
+        display: block;  /* show mobile menu */
+    }
+}
+
+#responsabilidade-civil-av{
+    margin-left: 15%;
+    margin-right: 30%;
+
+}
+
+.av-lista-offset{
+    padding-left: 20px;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+.introducao-container{
+    position: relative;
+}
+
+.introducao-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    pointer-events: none; /* lets you click through it */
+}
+
+.intro-text-container{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    max-width: 550px;
+    z-index: 2;
+}
+
+.intro-text-container h1{
+    font-size: 53px;
+    font-weight: 100;
+    font-family: "Playfair Display",serif;
+}
+
+.intro-text-container h2{
+    font-size: 90px;
+    font-weight: 100;
+    
+}
+
+.btn{
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+    color:black;
+    font-weight: 800;
+    font-size: 12px;
 }
 
 body {
@@ -231,3 +319,19 @@ figure.introducao-container img {
   object-position: center;
   display: block;
 }
+
+footer{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: rgba(86, 55, 50);
+    color: white;
+}
+
+footer p{
+    padding:0px;
+    margin:0px;
+}
+
