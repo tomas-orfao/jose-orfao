@@ -30,33 +30,35 @@
         
           <nav class="navbar-tele" role="navigation" aria-label="Navegação principal">
             <div class="logo-tele">
-                <a href="#introducao" aria-label="Introdução ao advogado José Orfão"> <!-- METER O LOGO TEXTO AQUI E ARRANJAR FORMA DE MUDAR PARA LOGO ICON -->
-                <img src="Advogado Fotos/José Orfão Logótipo.svg" alt="Logótipo Advogado José Orfão">
+                <a href="index.html#introducao" aria-label="Introdução ao advogado José Orfão"> <!-- METER O LOGO TEXTO AQUI E ARRANJAR FORMA DE MUDAR PARA LOGO ICON -->
+                <img src="advogado-fotos/jose-orfao-logotipo.svg" alt="Logótipo Advogado José Orfão">
                 </a>
             </div>
 
-             <ul class="nav-lista-tele" style="list-style-type: none;">
-                <li><a href="#pratica-preferencial">Prática preferencial</a>
-                    <ul class="dropdown-tele">
-                        <li><a href="pratica-viacao.html">Acidentes de viação</a></li>
-                        <hr class="dropdown-hr-tele">
-                        <li><a href="pratica-trabalho.html">Acidentes de trabalho</a></li>
-                        <hr class="dropdown-hr-tele">
-                        <li><a href="pratica-venda.html">Venda defeituosa de bens</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html">Outras áreas</a></li>
-                <li><a href="index.html#principios-valores">Princípios e Valores</a></li>
-                <li><a href="index.html#formacao">Formação</a></li>
-                <li><a href="index.html#informacao">Informação</a></li>
-                <li><a href="index.html#contactos">Contactos</a></li>
-            </ul>
+            <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">☰</button>
         </nav>
+        <ul class="nav-lista-tele">
+            <li class="has-dropdown">
+                <a href="#pratica-preferencial">Prática preferencial</a>
+                <ul class="dropdown-tele">
+                    <li><a href="pratica-viacao.html" class="offset-menu-tele-av">Acidentes de viação</a></li>
+                    <hr class="dropdown-hr-tele">
+                    <li><a href="pratica-trabalho.html">Acidentes de trabalho</a></li>
+                    <hr class="dropdown-hr-tele">
+                    <li><a href="pratica-venda.html">Venda defeituosa de bens</a></li>
+                </ul>
+            </li>
+                <li><a href="#outras-areas">Outras áreas</a></li>
+                <li><a href="#principios-valores">Princípios e Valores</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#informacao">Informação</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+        </ul>
 
         <nav class="navbar-pc" role="navigation" aria-label="Navegação principal">
             <div class="logo-pc">
                 <a href="index.html#introducao" aria-label="Introdução ao advogado José Orfão"> <!-- METER O LOGO TEXTO AQUI E ARRANJAR FORMA DE MUDAR PARA LOGO ICON -->
-                <img src="Advogado Fotos/José Orfão Logótipo.svg" alt="Logótipo Advogado José Orfão">
+                <img src="advogado-fotos/jose-orfao-logotipo.svg" alt="Logótipo Advogado José Orfão">
                 </a>
             </div>
 
@@ -82,7 +84,7 @@
     <section id="viatura-introducao" aria-label="Introdução à indemnização de acidentes de viatura">
         <div class="indemnizacao-viatura-introducao">
             <figure class="introducao-container">
-                <img src="Advogado Fotos/Carro capotado.jpg" alt="Acidente de viação com dois carros danificados">
+                <img src="advogado-fotos/carro-capotado.jpg" alt="Acidente de viação com dois carros danificados">
             </figure>
             <h1>Indemnização de acidentes de viatura</h1>
             <p>Por uma justa e devida indemnização, defenda os seus direitos.</p>
@@ -172,3 +174,5 @@
             <a href="#contactos">Contactos</a>
         </nav>
     </footer>
+    <script src="script.js"></script>
+    </body>

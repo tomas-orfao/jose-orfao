@@ -46,17 +46,107 @@ header {
     margin: 10px;
 }
 
-.navbar-tele {
-    display: none;
-    margin: 20px 5% 0px 5%;
-    background-color: rgba(62, 54, 49, 0.82);
-    border: 0.5px solid rgba(105, 95, 85, 0.95);
-    backdrop-filter: blur(10px); /* the frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+.hamburger {
+    height:30px;
+    width:auto;
+    font-size: 30px;
+    margin: 10px;
+    margin-top: 0px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-.navbar-tele li{
+.navbar-tele {
     display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 10% 0px 10%;
+    background-color: rgba(62, 54, 49, 0.82);
+    border: 0.5px solid rgba(105, 95, 85, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Mobile menu container */
+.nav-lista-tele {
+    margin: 0px 10% 0px 10%;
+    padding: 0px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    text-align: center;
+    background-color: rgba(62, 54, 49, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    list-style: none;
+    font-weight: 500;
+}
+
+/* Show the menu when toggled */
+.nav-lista-tele.show {
+    max-height: 1000px; /* adjust if needed */
+    padding:10px;
+    border: 0.5px solid rgba(105, 95, 85, 0.95);
+}
+
+/* Menu items */
+.nav-lista-tele li {
+    padding: 10px 0;
+}
+
+/* Links inside menu */
+.nav-lista-tele a {
+    position: relative;
+    display: inline-block;
+}
+
+/* Pill hover effect */
+.nav-lista-tele a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(135, 116, 105, 0.3);
+    border-radius: 30px;
+    transform: scale(1);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    z-index: -1;
+}
+
+.nav-lista-tele a:hover::after {
+    transform: scale(1.2,1.5);
+    opacity: 1;
+}
+
+/* Sub-dropdown */
+.nav-lista-tele .has-dropdown .dropdown-tele {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.8);
+    list-style: none;
+}
+
+/* Show sub-dropdown when active */
+.nav-lista-tele .has-dropdown.active .dropdown-tele {
+    max-height: 500px; /* adjust based on content */
+}
+
+.offset-menu-tele-av{
+    margin-top:10px;
+}
+
+.dropdown-hr-tele{
+    border: 0.5px solid rgba(105, 95, 85, 0.95);
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 .navbar-pc{
@@ -212,13 +302,17 @@ header {
     transform: scale(1.21, 1.1); /* expand fully between the HR lines */
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 970px) {
 
     .navbar-pc {
         display: none;   /* hide desktop menu */
     }
 
     .navbar-tele {
+        display: flex;  /* show mobile menu */
+    }
+
+    .nav-lista-tele{
         display: block;  /* show mobile menu */
     }
 }
@@ -338,5 +432,4 @@ footer p{
     padding:0px;
     margin:0px;
 }
-
 
