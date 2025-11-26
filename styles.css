@@ -48,11 +48,15 @@ header {
 
 .navbar-tele {
     display: none;
-    margin: 20px 20% 0px 20%;
+    margin: 20px 5% 0px 5%;
     background-color: rgba(62, 54, 49, 0.82);
     border: 0.5px solid rgba(105, 95, 85, 0.95);
     backdrop-filter: blur(10px); /* the frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+.navbar-tele li{
+    display: none;
 }
 
 .navbar-pc{
@@ -334,4 +338,5 @@ footer p{
     padding:0px;
     margin:0px;
 }
+
 
