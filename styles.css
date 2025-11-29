@@ -83,6 +83,7 @@ header {
     color: white;
     list-style: none;
     font-weight: 500;
+    font-size: 17px;
 }
 
 .nav-lista-tele.hide-on-scroll {
@@ -176,6 +177,7 @@ header {
 }
 
 .nav-lista-pc {
+    list-style-type: none;
     background-color: rgba(62, 54, 49, 0.82); /* semi-transparent blue */
     border: 0.5px solid rgba(105, 95, 85, 0.95);
     backdrop-filter: blur(10px); /* the frosted glass effect */
@@ -310,20 +312,7 @@ header {
     transform: scale(1.21, 1.1); /* expand fully between the HR lines */
 }
 
-@media (max-width: 970px) {
 
-    .navbar-pc {
-        display: none;   /* hide desktop menu */
-    }
-
-    .navbar-tele {
-        display: flex;  /* show mobile menu */
-    }
-
-    .nav-lista-tele{
-        display: block;  /* show mobile menu */
-    }
-}
 
 #responsabilidade-civil-av{
     margin-left: 15%;
@@ -345,9 +334,6 @@ a {
     text-decoration: none;
 }
 
-.introducao-container{
-    position: relative;
-}
 
 .introducao-container::after {
     content: "";
@@ -426,6 +412,22 @@ figure.introducao-container img {
   display: block;
 }
 
+.lista-areas{
+    list-style-type: none;
+}
+
+.lista-principios-valores{
+    list-style-type: none;
+}
+
+.formacao-conteudo li{
+    list-style-type: none;
+}
+
+.perguntas-frequentes li{
+    list-style-type: none;
+}
+
 footer{
     display:flex;
     align-items:center;
@@ -441,3 +443,70 @@ footer p{
     margin:0px;
 }
 
+/* SLIDESHOW CONTAINER */
+.introducao-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+/* STACK ALL IMAGES IN THE SAME PLACE */
+.introducao-container img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideShow 12s infinite;
+}
+
+/* SHOW EACH IMAGE DURING 2 SECONDS */
+.introducao-container img:nth-child(1) { 
+    animation-delay: 0s; 
+}
+.introducao-container img:nth-child(2) { 
+    animation-delay: 4s; 
+}
+.introducao-container img:nth-child(3) { 
+    animation-delay: 8s; 
+}
+
+/* FADE ANIMATION */
+@keyframes slideShow {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    40% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@media (max-width: 970px) {
+
+    .navbar-pc {
+        display: none;
+    }
+
+    .navbar-tele {
+        display: flex;
+    }
+
+    .nav-lista-tele{
+        display: block; 
+    }
+
+    .intro-text-container h1 {
+        font-size: 35px ;
+    }
+
+    .intro-text-container h2 {
+        font-size: 60px ;
+    }
+
+    .intro-text-container h3 {
+        font-size: 20px ;
+    }
+
+}
