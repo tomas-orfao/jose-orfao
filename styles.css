@@ -514,12 +514,17 @@ figure.introducao-container-av img {
         display: block; 
     }
 
+    .intro-text-container{
+        margin-right:15%;
+        margin-top:10%;
+    }
+
     .intro-text-container h1 {
         font-size: 35px ;
     }
 
     .intro-text-container h2 {
-        font-size: 60px ;
+        font-size: 50px ;
     }
 
     .intro-text-container h3 {
