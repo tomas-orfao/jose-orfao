@@ -443,6 +443,21 @@ footer p{
     margin:0px;
 }
 
+figure.introducao-container-av {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+figure.introducao-container-av img {
+  transform: scale(1.2); 
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 /* SLIDESHOW CONTAINER */
 .introducao-container {
     position: relative;
@@ -451,6 +466,8 @@ footer p{
     overflow: hidden;
     background-color: black;
 }
+
+
 
 /* STACK ALL IMAGES IN THE SAME PLACE */
 .introducao-container img {
