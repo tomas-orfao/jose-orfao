@@ -463,17 +463,19 @@ figure.introducao-container img {
     background: #FFFFFF;
     background-color: #fff;
     border-radius: 16px;
-    /* cantos arredondados */
     box-shadow: 0 4px 12px 3px rgba(0, 0, 0, 0.1);
-    /* sombra para destacar o cartão */
-    width: 767px;
-    /* tamanho máximo do cartãp*/
-    height: 425px;
+    width: 830px;
+    height: 410px;
     margin: 50px auto;
     margin-bottom: 0px !important;
-    /* centraliza o cartão na tela (auto nas laterais). */
     display: flex;
     padding: 0px;
+    transition: transform 0.4s ease;
+}
+
+.cartas-borda:hover {
+    transform: scale(1.01);
+    z-index: 999; /* so it doesn't get clipped by surrounding elements */
 }
 
 .carta-pagina1 {
