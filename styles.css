@@ -435,9 +435,7 @@ figure.introducao-container img {
 .carta-pagina2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* duas colunas iguais */
     column-gap: 0px;
-    /* espaço entre colunas */
     position: relative;
 
 }
@@ -524,10 +522,15 @@ figure.introducao-container img {
     font-weight:500;
 }
 
+
 .carta-pagina1 .carta-conteudo hr {
     width: 150px;
     border: 1px solid #ccc;
     margin: 0px 0 20px 0;
+}
+
+.carta-conteudo hr{
+    margin-top: 20px !important;
 }
 
 .carta-pagina1 .carta-conteudo p {
@@ -615,6 +618,10 @@ figure.introducao-container img {
 /* Página 1 desaparece suavemente */
 .carta-pagina1.hide {
     opacity: 0;
+}
+
+.carta-pagina2 p{
+    margin:15px 0px;
 }
 
 .outras-areas{
