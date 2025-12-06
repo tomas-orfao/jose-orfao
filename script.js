@@ -57,3 +57,14 @@ document.querySelectorAll(".pergunta").forEach(pergunta => {
 
     });
 });
+
+
+document.querySelectorAll(".cartas-borda").forEach(carta => {
+    const pagina2 = carta.querySelector(".carta-pagina2");
+    const botao = carta.querySelector(".botao-btn-mais");
+
+    botao.addEventListener("click", () => {
+        const isOpen = pagina2.classList.toggle("open");
+        botao.classList.toggle("open", isOpen);
+    });
+});

@@ -63,7 +63,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 20px 10% 0px 10%;
-    background-color: rgba(62, 54, 49, 0.82);
+    background-color: rgba(82, 64, 54, 0.82);
     border: 0.5px solid rgba(105, 95, 85, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -77,7 +77,7 @@ header {
     overflow: hidden;
     transition: max-height 0.3s ease;
     text-align: center;
-    background-color: rgba(62, 54, 49, 0.82);
+    background-color: rgba(82, 64, 54, 0.82);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: white;
@@ -173,7 +173,7 @@ header {
 
 .nav-lista-pc {
     list-style-type: none;
-    background-color: rgba(62, 54, 49, 0.82);
+    background-color: rgba(82, 64, 54, 0.82);
     border: 0.5px solid rgba(105, 95, 85, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -402,6 +402,10 @@ figure.introducao-container img {
   display: block;
 }
 
+.pratica-preferencial{
+    background-color: rgb(245, 245, 245);
+}
+
 .texto-pratica-topo{
     text-align: center;
     padding-top: 40px;
@@ -428,13 +432,201 @@ figure.introducao-container img {
     margin: 0 auto;
 }
 
+.carta-pagina2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* duas colunas iguais */
+    column-gap: 0px;
+    /* espaço entre colunas */
+    position: relative;
+
+}
+
+.coluna1,
+.coluna2 {
+    word-wrap: break-word;
+    padding: 0px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:rgb(61, 61, 61);
+}
+
+.coluna1 {
+    border-right: 1px solid #ccc;
+    
+}
+
+.cartas-borda {
+    border: 1px solid #D1D1D1;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    width: 70%;
+    background: #FFFFFF;
+    background-color: #fff;
+    border-radius: 16px;
+    /* cantos arredondados */
+    box-shadow: 0 4px 12px 3px rgba(0, 0, 0, 0.1);
+    /* sombra para destacar o cartão */
+    width: 767px;
+    /* tamanho máximo do cartãp*/
+    height: 425px;
+    margin: 50px auto;
+    margin-bottom: 0px !important;
+    /* centraliza o cartão na tela (auto nas laterais). */
+    display: flex;
+    padding: 0px;
+}
+
+.carta-pagina1 {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    /* coloca os elementos (imagem e texto) lado a lado */
+}
+
+
+.carta-pagina1 .imagem {
+    flex: 1;
+}
+
+.carta-pagina1 .imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* conteúdo à direita */
+.carta-pagina1 .carta-conteudo {
+    flex: 0.84;
+    padding: 20px 40px;
+    /*centraliza o conteúdo verticalmente.*/
+    position: relative;
+}
+
+.carta-conteudo h3 {
+    font-family: Gloock;
+    font-size: 30px;
+    font-weight:500;
+    color: rgb(61, 61, 61);
+}
+
+.carta-pagina2 h4 {
+    font-family: Gloock;
+    font-size: 30px;
+    font-weight:500;
+}
+
+.carta-pagina2 h5 {
+    font-family: Gloock;
+    font-size: 20px;
+    font-weight:500;
+}
+
+.carta-pagina1 .carta-conteudo hr {
+    width: 150px;
+    border: 1px solid #ccc;
+    margin: 0px 0 20px 0;
+}
+
+.carta-pagina1 .carta-conteudo p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* botão */
+.botoes-pagina-2{
+    display: flex;
+}
+
+.botao-btn {
+    color: rgb(61, 61, 61);
+    text-decoration: underline;
+    bottom: 40px;
+}
+
+.botao-btn-mais {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 30px;
+    color: rgb(61, 61, 61);
+    border: 2px solid rgb(61, 61, 61);
+    border-radius: 50px;
+    width:40px;
+    height:40px;
+    z-index: 500; /* 👈 absolutely highest layer */
+    cursor: pointer;
+    background: white;
+}
+
+.botao-btn-mais span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.botao-btn-mais .minus {
+    opacity: 0; /* hidden by default */
+}
+
+.botao-btn-mais.open .plus {
+    opacity: 0;
+}
+
+.botao-btn-mais.open .minus {
+    opacity: 1;
+}
+
+.carta-pagina1,
+.carta-pagina2 {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+/* Página 2 começa fora do ecrã (à direita) */
+.carta-pagina2 {
+    opacity: 0;
+    padding-top:20px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background: white; /* or transparent if you prefer */
+    z-index: 5; /* below button, above page1 */
+}
+
+/* Quando aberta, entra para dentro */
+.carta-pagina2.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Página 1 desaparece suavemente */
+.carta-pagina1.hide {
+    opacity: 0;
+}
+
+.outras-areas{
+    background: linear-gradient(to bottom, rgb(245, 245, 245), rgb(255, 255, 255));
+    padding-top: 100px;
+}
+
 .outras-areas-texto{
     display: flex;
     align-items:last baseline;
     justify-content: center;
     gap:15vw;
-    padding-top: 40px;
-    padding-bottom: 40px;
     color:rgb(69, 46, 43);
 }
 
@@ -479,8 +671,9 @@ figure.introducao-container img {
     text-align: center;
     width: fit-content;
     margin: 0 auto;
-    padding: 200px 0px;
+    padding: 100px 0px;
     color:rgb(69, 46, 43);
+
 }
 
 .principios-valores-total h2{
@@ -533,7 +726,7 @@ figure.introducao-container img {
 .formacao-total{
     display:flex;
     align-items: center;
-    background-color: rgb(86,55,50);
+    background-color: rgb(77, 55, 46);
 }
 
 .formacao-total img{
@@ -566,13 +759,14 @@ figure.introducao-container img {
 .formacao-conteudo li{
     list-style-type: none;
     line-height: 22px;
+    font-size: 13px;
 }
 
 .informacoes-texto{
     background-color:rgb(245, 245, 245);
     text-align: center;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     color:rgb(69, 46, 43);
 }
 
@@ -585,8 +779,8 @@ figure.introducao-container img {
 .informacoes-texto h3{
     font-size: 20px;
     font-weight: 200;
-    padding: 5px;
-    padding-bottom: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .informacoes-texto hr{
@@ -668,7 +862,7 @@ figure.introducao-container img {
 }
 
 .contactos-texto{
-    background-color: rgb(86,55,50);
+    background-color: rgb(77, 55, 46);
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -676,7 +870,7 @@ figure.introducao-container img {
 }
 
 .contactos-texto h2{
-    font-size: 64px;
+    font-size: 40px;
     font-weight: 500;
     padding: 5px;
 }
@@ -705,7 +899,7 @@ footer{
     justify-content: center;
     gap: 10px;
     padding: 20px;
-    background-color: rgba(86, 55, 50);
+    background-color: rgba(77, 55, 46);
     color: white;
 }
 
@@ -887,20 +1081,26 @@ figure.introducao-container-av img {
 
 .formacao-total{
     display:block;
+
 }
 
 .formacao-total img{
-  width: 90vw;
+  width: 100vw;
   height: auto;
   margin:0 auto;
-  padding-top: 4vw;
+  padding:5%;
 }
 
 .formacao-conteudo{
-    padding-bottom: 20px;
-    margin-bottom: 0px;
+    padding-bottom: 30px;
+    margin: 0px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
+.formacao-conteudo h2{
+    font-size: 40px;
+}
 
 .resposta {
     display: none;
