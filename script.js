@@ -68,3 +68,35 @@ document.querySelectorAll(".cartas-borda").forEach(carta => {
         botao.classList.toggle("open", isOpen);
     });
 });
+
+document.querySelectorAll(".cartas-borda-tele").forEach(carta => {
+    const pagina2 = carta.querySelector(".carta-pagina2-tele");
+    const botao = carta.querySelector(".botao-btn-mais");
+
+    botao.addEventListener("click", () => {
+        const isOpen = pagina2.classList.toggle("open");
+        botao.classList.toggle("open", isOpen);
+    });
+});
+
+let lastScroll = 0;
+
+const navbarPC = document.querySelector('.navbar-pc');
+const navbarTele = document.querySelector('.navbar-tele');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 80) {
+        // scrolling down
+        navbarPC.classList.add('hide');
+        navbarTele.classList.add('hide');
+    } else {
+        // scrolling up
+        navbarPC.classList.remove('hide');
+        navbarTele.classList.remove('hide');
+    }
+
+    lastScroll = currentScroll;
+});
+
