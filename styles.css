@@ -49,9 +49,10 @@ header {
 .hamburger {
     height:30px;
     width:auto;
-    font-size: 30px;
+    font-size: 35px;
     margin: 10px;
     margin-top: 0px;
+    margin-bottom: 17px;
     background: none;
     border: none;
     color: white;
@@ -68,6 +69,8 @@ header {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: transform 0.4s ease, opacity 0.4s ease;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 .navbar-tele.hide {
@@ -330,9 +333,6 @@ header {
 
 }
 
-.av-lista-offset{
-    padding-left: 20px;
-}
 
 p {
     margin-top: 15px;
@@ -380,12 +380,10 @@ a {
 }
 
 .btn{
-    background-color: white;
-    border-radius: 10px;
-    padding: 5px 15px;
-    color:black;
-    font-weight: 800;
+    color:white;
+    font-weight: 400;
     font-size: 12px;
+    text-decoration: underline;
 }
 
 body {
@@ -446,12 +444,6 @@ figure.introducao-container img {
     padding-bottom: 15px;
 }
 
-.texto-pratica-topo hr{
-    border: 0.5px solid rgba(69, 46, 43);
-    width:120px;
-    margin: 0 auto;
-}
-
 /*CARTA TELE*/
 
 .cartas-tele{
@@ -475,7 +467,6 @@ figure.introducao-container img {
     padding: 0px;
     transition: transform 0.4s ease;
 }
-
 
 .carta-pagina1-tele {
     display: block;
@@ -517,14 +508,14 @@ figure.introducao-container img {
 .coluna1-tele,
 .coluna2-tele {
     word-wrap: break-word;
-    padding: 0px 5%;
-    margin-top: 20px;
+    padding: 0px 5vw;
     margin-bottom: 20px;
     color:rgb(61, 61, 61);
 }
 
 .coluna1-tele {
     border-right: 1px solid #ccc;
+    margin-top: 5vw;
     
 }
 
@@ -549,56 +540,6 @@ figure.introducao-container img {
 
 .carta-conteudo-tele hr{
     margin-top: 20px !important;
-}
-
-/* botão */
-.botoes-pagina-2{
-    display: flex;
-}
-
-.botao-btn {
-    color: rgb(61, 61, 61);
-    text-decoration: underline;
-    bottom: 40px;
-}
-
-.botao-btn-mais {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    font-size: 30px;
-    color: rgb(61, 61, 61);
-    border: 2px solid rgb(61, 61, 61);
-    border-radius: 50px;
-    width:40px;
-    height:40px;
-    z-index: 500; /* 👈 absolutely highest layer */
-    cursor: pointer;
-    background: white;
-}
-
-.botao-btn-mais span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease;
-}
-
-.botao-btn-mais .minus {
-    opacity: 0; /* hidden by default */
-}
-
-.botao-btn-mais.open .plus {
-    opacity: 0;
-}
-
-.botao-btn-mais.open .minus {
-    opacity: 1;
 }
 
 .carta-pagina1-tele,
@@ -752,7 +693,13 @@ figure.introducao-container img {
 .botao-btn {
     color: rgb(61, 61, 61);
     text-decoration: underline;
-    bottom: 40px;
+}
+
+.botao-btn-tele{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    display: block;
 }
 
 .botao-btn-mais {
@@ -852,11 +799,6 @@ figure.introducao-container img {
     padding-bottom: 15px;
 }
 
-.outras-areas-texto hr{
-    border: 0.5px solid rgba(69, 46, 43);
-    width:120px;
-}
-
 .outras-areas-texto p{
     font-size: 20px;
     font-weight: 500;
@@ -893,13 +835,6 @@ figure.introducao-container img {
     font-weight: 500;
     padding: 15px;
     padding-bottom: 15px;
-}
-
-.principios-valores-total hr{
-    border: 0.5px solid rgba(69, 46, 43);
-    width:200px;
-    margin: 0 auto;
-    margin-bottom: 15px;
 }
 
 .texto-principios{
@@ -964,11 +899,6 @@ figure.introducao-container img {
     padding-top: 30px;
 }
 
-.formacao-conteudo hr{
-    border: 0.5px solid rgb(255, 255, 255);
-    width:120px;
-}
-
 .formacao-conteudo li{
     list-style-type: none;
     line-height: 22px;
@@ -994,12 +924,6 @@ figure.introducao-container img {
     font-weight: 200;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-
-.informacoes-texto hr{
-    border: 0.5px solid rgba(69, 46, 43);
-    width:120px;
-    margin: 0 auto;
 }
 
 .perguntas-frequentes li{
@@ -1088,12 +1012,6 @@ figure.introducao-container img {
     padding: 5px;
 }
 
-.contactos-texto hr{
-    border: 0.5px solid rgb(255, 255, 255);
-    width:120px;
-    margin: 0 auto;
-}
-
 .contactos-texto p{
     margin-top:30px;
     margin-bottom:5px;
@@ -1164,6 +1082,51 @@ figure.introducao-container-av img {
     animation-delay: 8s; 
 }
 
+#responsabilidade-civil-av{
+    margin: 0 5%;
+}
+
+#responsabilidade-civil-av ol{
+    margin-left: 15px;
+}
+
+.indemnizacao-viatura-introducao {
+    position: relative;
+}
+
+.texto-total-viatura{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    max-width: 550px;
+    text-align: left;
+    z-index: 10;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.texto-total-viatura h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.texto-total-viatura p{
+    font-size:17px;
+}
+
+.introducao-container-av::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    z-index: 2;
+}
+
 @keyframes slideShow {
     0% { opacity: 0; }
     10% { opacity: 1; }
@@ -1229,11 +1192,6 @@ figure.introducao-container-av img {
         font-size: 16px;
     }
 
-    .outras-areas-texto hr{
-    margin: 0 auto;
-    margin-bottom: 30px;
-    }
-
     .lista-areas{
         font-size: 20px;
         width: fit-content;
@@ -1246,11 +1204,6 @@ figure.introducao-container-av img {
     .principios-valores-total{
         width: 90%;
         margin: 0 auto;
-    }
-
-    .principios-valores-total hr{
-        width:150px;
-        margin-bottom: 40px;
     }
 
     .texto-principios{
@@ -1289,14 +1242,21 @@ figure.introducao-container-av img {
 
     .formacao-total{
         display:block;
+        border-radius: 20px 20px 0 0;
 
     }
 
-    .formacao-total img{
+    .formacao-imagem {
+        position: relative;
         width: 100vw;
-        height: auto;
-        margin:0 auto;
+        overflow: hidden;
+        margin: 0 auto;
         padding:5%;
+    }
+    .formacao-imagem img {
+        width: 100%;
+        height: auto;
+        justify-content: center;
     }
 
     .formacao-conteudo{
@@ -1332,10 +1292,32 @@ figure.introducao-container-av img {
         display:block;
     }
 
+    .texto-total-viatura{
+        top: 60%;
+        left: 5%;
+        max-width: 350px;
+    }
+
+    .texto-total-viatura h1{
+        font-size: 3rem;
+    }
+
+    .texto-total-viatura p{
+        font-size:15px;
+    }
+
+    .introducao-container-av::after{
+        background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    }
+
+    .contactos-texto{
+        border-radius: 20px 20px 0 0;
+    }
+
     footer{
         display:block;
         text-align:center;
         margin:0 auto;
         line-height: 40px;
-}
+    }
 }
