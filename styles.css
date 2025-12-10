@@ -426,8 +426,8 @@ figure.introducao-container img {
 
 .texto-pratica-topo{
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 0px;
     color:rgb(69, 46, 43);
 }
 
@@ -782,21 +782,37 @@ figure.introducao-container img {
 }
 
 .outras-areas-texto{
-    display: flex;
-    align-items:last baseline;
-    justify-content: center;
-    gap:15vw;
-    color:rgb(69, 46, 43);
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .outras-esquerda{
-    width: 20%;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 5%;
+    margin-left: 5%;
+}
+
+.lista-areas{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+    list-style-type:none;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 45px;
+    color: rgb(69, 46, 43, 0.8);
 }
 
 .outras-areas-texto h2{
+    color: rgb(69, 46, 43);
     font-size: 40px;
     font-weight: 500;
-    padding-bottom: 15px;
+    padding-bottom: 50px;
 }
 
 .outras-areas-texto p{
@@ -805,16 +821,8 @@ figure.introducao-container img {
     color:rgba(69, 46, 43, 0.8);
 }
 
-.lista-areas{
-    width: 30%;
-    list-style-type:none;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 45px;
-}
-
 .lista-areas li::before {
-    content: "\003e\0020";
+    content: "-";
     margin-right: 15px;
     font-weight: bold;
     color:rgba(69, 46, 43, 0.60)
@@ -1039,20 +1047,7 @@ footer p{
     margin:0px;
 }
 
-figure.introducao-container-av {
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-}
 
-figure.introducao-container-av img {
-  transform: scale(1.2); 
-  width: 100%;
-  height: 110%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
 
 .introducao-container {
     position: relative;
@@ -1082,12 +1077,34 @@ figure.introducao-container-av img {
     animation-delay: 8s; 
 }
 
+/*AV*/
+
+figure.introducao-container-av {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+figure.introducao-container-av img {
+  transform: scale(1.2); 
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 #responsabilidade-civil-av{
-    margin: 0 5%;
+    margin: 5%;
 }
 
 #responsabilidade-civil-av ol{
     margin-left: 15px;
+    text-align: justify;
+}
+
+#responsabilidade-civil-av p{
+    text-align: justify;
 }
 
 .indemnizacao-viatura-introducao {
@@ -1117,6 +1134,138 @@ figure.introducao-container-av img {
 }
 
 .introducao-container-av::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    z-index: 2;
+}
+/*AT*/
+
+figure.introducao-container-tr {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+figure.introducao-container-tr img {
+  transform: scale(1.2); 
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+#responsabilidade-civil-tr{
+    margin: 5%;
+}
+
+#responsabilidade-civil-tr p{
+    text-align: justify;
+}
+
+#responsabilidade-civil-tr h2{
+    padding-bottom:20px;
+}
+
+.indemnizacao-trabalho-introducao {
+    position: relative;
+}
+
+.texto-total-trabalho{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    max-width: 550px;
+    text-align: left;
+    z-index: 10;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.texto-total-trabalho h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.texto-total-trabalho p{
+    font-size:17px;
+}
+
+.introducao-container-tr::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    z-index: 2;
+}
+
+/*BENS*/
+
+figure.introducao-container-bens {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+figure.introducao-container-bens img {
+  transform: scale(1.2); 
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+#responsabilidade-civil-bens{
+    margin: 5%;
+}
+
+#responsabilidade-civil-bens ol{
+    margin-left: 15px;
+    text-align: justify;
+}
+
+#responsabilidade-civil-bens p{
+    text-align: justify;
+}
+
+.indemnizacao-bens-introducao {
+    position: relative;
+}
+
+.texto-total-bens{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    max-width: 550px;
+    text-align: left;
+    z-index: 10;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.texto-total-bens h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.texto-total-bens p{
+    font-size:17px;
+}
+
+.introducao-container-bens::after {
     content: "";
     position: absolute;
     top: 0;
@@ -1243,7 +1392,6 @@ figure.introducao-container-av img {
     .formacao-total{
         display:block;
         border-radius: 20px 20px 0 0;
-
     }
 
     .formacao-imagem {
@@ -1292,10 +1440,20 @@ figure.introducao-container-av img {
         display:block;
     }
 
+    /*AV*/
+
+    #responsabilidade-civil-av ol{
+        text-align: left;
+    }
+
+    #responsabilidade-civil-av p{
+        text-align: left;
+    }
+
     .texto-total-viatura{
         top: 60%;
         left: 5%;
-        max-width: 350px;
+        max-width: 300px;
     }
 
     .texto-total-viatura h1{
@@ -1307,6 +1465,62 @@ figure.introducao-container-av img {
     }
 
     .introducao-container-av::after{
+        background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    }
+
+/*AT*/
+
+    #responsabilidade-civil-tr ol{
+        text-align: left;
+    }
+
+    #responsabilidade-civil-tr p{
+        text-align: left;
+    }
+
+    .texto-total-trabalho{
+        top: 60%;
+        left: 5%;
+        max-width: 300px;
+    }
+
+    .texto-total-trabalho h1{
+        font-size: 3rem;
+    }
+
+    .texto-total-trabalho p{
+        font-size:15px;
+    }
+
+    .introducao-container-tr::after{
+        background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    }
+
+/*BENS*/
+
+#responsabilidade-civil-bens ol{
+        text-align: left;
+    }
+
+    #responsabilidade-civil-bens p{
+        text-align: left;
+    }
+
+    .texto-total-bens{
+        top: 60%;
+        left: 5%;
+        max-width: 300px;
+    }
+
+    .texto-total-bens h1{
+        font-size: 3rem;
+    }
+
+    .texto-total-bens p{
+        font-size:15px;
+    }
+
+    .introducao-container-bens::after{
         background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
     }
 
