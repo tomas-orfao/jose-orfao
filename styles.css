@@ -379,6 +379,10 @@ a {
     
 }
 
+.intro-text-container p{
+    margin: 20px 0;
+}
+
 .btn{
     color:white;
     font-weight: 400;
@@ -777,8 +781,9 @@ figure.introducao-container img {
 }
 
 .outras-areas{
-    background: linear-gradient(to bottom, rgb(245, 245, 245), rgb(255, 255, 255));
-    padding-top: 100px;
+    background-color:rgb(77, 55, 46);
+    padding: 100px 0;
+    margin: 50px 0;
 }
 
 .outras-areas-texto{
@@ -802,30 +807,24 @@ figure.introducao-container img {
     padding-left: 15%;
     padding-right: 15%;
     list-style-type:none;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 45px;
-    color: rgb(69, 46, 43, 0.8);
+    color: white;
 }
 
 .outras-areas-texto h2{
-    color: rgb(69, 46, 43);
+    color: white;
     font-size: 40px;
     font-weight: 500;
     padding-bottom: 50px;
-}
-
-.outras-areas-texto p{
-    font-size: 20px;
-    font-weight: 500;
-    color:rgba(69, 46, 43, 0.8);
 }
 
 .lista-areas li::before {
     content: "-";
     margin-right: 15px;
     font-weight: bold;
-    color:rgba(69, 46, 43, 0.60)
+    color:white
 }
 
 .principios-valores-total{
@@ -833,7 +832,7 @@ figure.introducao-container img {
     text-align: center;
     width: fit-content;
     margin: 0 auto;
-    padding: 100px 0px;
+    padding: 50px 0px;
     color:rgb(69, 46, 43);
 
 }
@@ -882,6 +881,7 @@ figure.introducao-container img {
     display:flex;
     align-items: center;
     background-color: rgb(77, 55, 46);
+    margin-top: 50px;
 }
 
 .formacao-total img{
@@ -1309,7 +1309,7 @@ figure.introducao-container-bens img {
         max-height: 80vh;
         overflow: hidden;
         left: 0%;
-        transform: translateY(-30%);
+        transform: translateY(-40%);
     }
 
     .intro-text-container h1 {
