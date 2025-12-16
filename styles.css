@@ -451,6 +451,7 @@ figure.introducao-container img {
 /*CARTA TELE*/
 
 .cartas-tele{
+    padding-bottom: 50px;
     display: none;
 }
 
@@ -582,6 +583,10 @@ figure.introducao-container img {
 }
 
 /* CARTA PC */
+
+.cartas-pc{
+    padding-bottom:100px;
+}
 
 .carta-pagina2 {
     display: grid;
@@ -783,7 +788,7 @@ figure.introducao-container img {
 .outras-areas{
     background-color:rgb(77, 55, 46);
     padding: 100px 0;
-    margin: 50px 0;
+    margin-bottom: 50px;
 }
 
 .outras-areas-texto{
