@@ -1302,6 +1302,17 @@ figure.introducao-container-bens img {
     transform: translateY(0);
 }
 
+.fade-in--no-move {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    transition-delay: var(--delay, 0s);
+}
+
+.fade-in--no-move.show {
+    opacity: 1;
+}
+
+
 @media (max-width: 800px) {
 
     .navbar-pc {

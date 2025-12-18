@@ -100,7 +100,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-const fadeElements = document.querySelectorAll(".fade-in");
+const fadeElements = document.querySelectorAll(".fade-in, .fade-in--no-move");
 
 const observer = new IntersectionObserver(
     (entries) => {
